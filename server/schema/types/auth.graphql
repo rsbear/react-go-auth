@@ -1,0 +1,9 @@
+type Auth @goModel(model: "github.com/rsbear/goplay/models.Auth") {
+  id: Int!
+  email: String!
+  secret: String!
+}
+
+type NewAuth @goModel(model: "github.com/rsbear/goplay/models.NewAuth") {
+  email: String!
+}

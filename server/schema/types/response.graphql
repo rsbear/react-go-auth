@@ -1,0 +1,4 @@
+type Response @goModel(model: "github.com/rsbear/goplay/models.Response") {
+  success: Boolean!
+  message: String
+}

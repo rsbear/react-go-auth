@@ -1,0 +1,6 @@
+mutation CreateLoginAuth($email: String!) {
+  createLoginAuth(email: $email) {
+    success
+    message
+  }
+}

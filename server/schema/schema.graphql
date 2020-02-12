@@ -1,0 +1,17 @@
+type Query {
+  auths: [Auth]
+  users: [User]
+}
+
+type Mutation {
+  createLoginAuth(email: String!): Response!
+  deleteAuth(id: Int!): Response!
+  deleteUser(id: Int!): Response!
+  login(email: String!, secret: String!): Response!
+  signup(input: NewUser!): User
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+}

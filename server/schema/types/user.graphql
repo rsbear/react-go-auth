@@ -1,0 +1,10 @@
+type User @goModel(model: "github.com/rsbear/goplay/models.User") {
+  id: Int!
+  email: String!
+  username: String!
+}
+
+input NewUser @goModel(model: "github.com/rsbear/goplay/models.NewUser") {
+  email: String!
+  username: String!
+}

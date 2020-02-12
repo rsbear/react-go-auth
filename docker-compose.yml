@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+  app:
+    build: .
+    container_name: test_app
+    ports:
+      - 8080:8080
+    depends_on: 
+      - db
+    environment:
+      profile: prod
+  db:
+    image: "postgres:12"
+    container_name: "docker_test_db"
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: "test"
+      POSTGRES_PASSWORD: "test"
+      POSTGRES_DB: "reactgo_db"
+
